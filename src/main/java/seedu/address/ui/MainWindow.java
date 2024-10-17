@@ -4,15 +4,20 @@ import java.util.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputControl;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.Logic;
+import seedu.address.logic.commands.AddClientProfile;
+import seedu.address.logic.commands.AddPropertyCommand;
+import seedu.address.logic.commands.AppointmentCommand;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
@@ -49,6 +54,18 @@ public class MainWindow extends UiPart<Stage> {
 
     @FXML
     private StackPane statusbarPlaceholder;
+
+    @FXML
+    private VBox sideBox;
+
+    @FXML
+    private Label labelOne;
+
+    @FXML
+    private Label labelTwo;
+
+    @FXML
+    private Label labelThree;
 
     /**
      * Creates a {@code MainWindow} with the given {@code Stage} and {@code Logic}.
@@ -121,6 +138,10 @@ public class MainWindow extends UiPart<Stage> {
 
         CommandBox commandBox = new CommandBox(this::executeCommand);
         commandBoxPlaceholder.getChildren().add(commandBox.getRoot());
+
+        labelOne.setText(AddClientProfile.COMMAND_WORD);
+        labelTwo.setText(AddPropertyCommand.COMMAND_WORD);
+        labelThree.setText(AppointmentCommand.COMMAND_WORD);
     }
 
     /**
