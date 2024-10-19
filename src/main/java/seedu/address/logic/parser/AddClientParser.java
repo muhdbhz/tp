@@ -7,8 +7,11 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 
 import java.util.Set;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
 
+import seedu.address.commons.core.LogsCenter;
+import seedu.address.logic.LogicManager;
 import seedu.address.logic.commands.AddBuyerProfile;
 import seedu.address.logic.commands.AddSellerProfile;
 import seedu.address.logic.commands.Command;
@@ -25,6 +28,16 @@ import seedu.address.model.tag.Tag;
  * Parses input arguments and creates a new AddCommand object
  */
 public class AddClientParser implements Parser<Command> {
+    private final Logger logger = LogsCenter.getLogger(LogicManager.class);
+    private final String role;
+
+    public AddClientParser(String commandWord) {
+        role = commandWord;
+    }
+
+    public AddClientParser() {
+        role = "";
+    }
 
     /**
      * Parses the given {@code String} of arguments in the context of the AddCommand
@@ -34,8 +47,6 @@ public class AddClientParser implements Parser<Command> {
     public Command parse(String args) throws ParseException {
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_TAG);
-
-        String role = argMultimap.getPreamble().trim();
 
         if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL)
                 || !argMultimap.getPreamble().isEmpty()) {
@@ -54,9 +65,11 @@ public class AddClientParser implements Parser<Command> {
 
         Email email = ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());
         if (role.equals("buyer")) {
+            // logger.info("buyer block reached");
             Buyer buyer = new Buyer(name, phone, email, tagList, appointment, property);
             return new AddBuyerProfile(buyer);
         } else {
+            // logger.info("seller block reached");
             Seller seller = new Seller(name, phone, email, tagList, appointment, property);
             return new AddSellerProfile(seller);
         }

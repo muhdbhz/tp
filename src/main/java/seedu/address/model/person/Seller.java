@@ -22,7 +22,7 @@ public class Seller extends Person {
      * @param property The property associated with the seller.
      */
     public Seller(Name name, Phone phone, Email email, Set<Tag> tags, Appointment appointment, Property property) {
-        super(name, phone, email, tags, Role.BUYER, appointment, property); // Specify role as SELLER
+        super(name, phone, email, tags, Role.SELLER, appointment, property); // Specify role as SELLER
     }
 
     /**
