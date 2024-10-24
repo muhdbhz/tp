@@ -12,7 +12,7 @@ import seedu.address.model.Model;
 public class ShowListingCommand extends Command {
 
     public static final String COMMAND_WORD = "showlisting";
-    public static final String MESSAGE_SUCCESS = "These are your listings!";
+    public static final String MESSAGE_SUCCESS = "Here are your listings!";
     public static final String MESSAGE_NO_LISTING_IN_LIST = "You currently have no listings in the list.";
     @Override
     public CommandResult execute(Model model) throws CommandException {
