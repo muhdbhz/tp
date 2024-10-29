@@ -27,32 +27,32 @@ public class TypicalListings {
     public static final Listing KENT_RIDGE = new ListingBuilder().withName("Kent Ridge Condo")
             .withAddress("543 Pasir Ris Street 11").withArea(90)
             .withPrice("400000", new BigDecimal("400000"))
-            .withSeller(TypicalPersons.ALICE)
+            .withSeller(TypicalPersons.CARL)
             .withBuyers(TypicalPersons.ELLE)
             .build();
     public static final Listing BUONA_VISTA = new ListingBuilder().withName("Buona Vista Residences")
             .withAddress("543 Pasir Ris Street 11").withArea(90)
             .withPrice("400000", new BigDecimal("400000"))
-            .withSeller(TypicalPersons.BENSON)
+            .withSeller(TypicalPersons.DANIEL)
             .withBuyers(TypicalPersons.GEORGE, TypicalPersons.FIONA)
             .build();
     public static final Listing SENGKANG = new ListingBuilder().withName("Sengkang HDB")
             .withAddress("543 Pasir Ris Street 11").withArea(90)
             .withPrice("400000", new BigDecimal("400000"))
-            .withSeller(TypicalPersons.BENSON)
+            .withSeller(TypicalPersons.ELLE)
             .withBuyers(TypicalPersons.FIONA)
             .build();
     public static final Listing PUNGGOL = new ListingBuilder().withName("Punggol Condo")
             .withAddress("543 Pasir Ris Street 11").withArea(90)
             .withPrice("400000", new BigDecimal("400000"))
-            .withSeller(TypicalPersons.CARL)
-            .withBuyers(TypicalPersons.FIONA, TypicalPersons.ELLE)
+            .withSeller(TypicalPersons.FIONA)
+            .withBuyers(TypicalPersons.ELLE)
             .build();
     public static final Listing SENTOSA = new ListingBuilder().withName("Sentosa Cove")
             .withAddress("543 Pasir Ris Street 11").withArea(90)
             .withPrice("400000", new BigDecimal("400000"))
-            .withSeller(TypicalPersons.CARL)
-            .withBuyers(TypicalPersons.GEORGE, TypicalPersons.DANIEL)
+            .withSeller(TypicalPersons.GEORGE)
+            .withBuyers(TypicalPersons.DANIEL)
             .build();
 
     private TypicalListings() {}
