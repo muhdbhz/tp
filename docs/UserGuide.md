@@ -876,7 +876,7 @@ There are a total of `6` listing management commands.
       >
       > ---
 
-- #### Clear Listing (6/6)
+- #### Clear All Listings (6/6)
     - **Format:** `clearlistings`
     - **Description:** Deletes ALL listings.
     - **Successful Execution:**
