@@ -12,16 +12,12 @@ EZStates is a **desktop app for managing contacts, optimized for use via a Comma
 
 --------------------------------------------------------------------------------------------------------------------
 
-## Quick Start: Get started in 3 minutes!
+## Quick Start: Get started in 10 minutes!
 
 In this quick start guide, you'll learn how to install EZSTATES. 
 <br>
 <br>
-**(OPTIONAL)** You'll also learn how our commands work to kickstart the application. 
-
-<div class="note" markdown="span"> 
-While learning our command structure is optional, we highly recommend reviewing this section to make using EZSTATES much easier.
-</div>
+You'll also learn how our commands work to kickstart the application.
 
 ### Installation _(~3min)_
 
@@ -48,9 +44,9 @@ While learning our command structure is optional, we highly recommend reviewing 
 
    * `exit` : Exits the app.
 
-6. Refer to the [Features](#features) for command details.
+6. Refer to the [Feature Categories](#feature-categories) for command details.
 
-### Command Structure _(~10 mins)_
+### Command Structure _(~7 mins)_
 
 In this section, we will explore the general format of commands in EZSTATES.
 
@@ -114,7 +110,7 @@ The prefixes used in EZSTATES are universal across all commands <br> _(i.e. have
 ## Feature Categories
 
 <div class="alert" markdown="span">
-You are strongly recommended to read through [Command Structure](#CommandStructure) before proceeding with this section!
+You are strongly recommended to read through [Command Structure](#command-structure) before proceeding with this section!
 </div>
 
 <br>
